@@ -920,7 +920,6 @@ export function checkValidInput(nameInput, telInput, cityInput, emailInput, adre
 }
 
 function filterCardDate(paymentCardDateInput, cardInfo) {
-    console.log(paymentCardDateInput.value);
     if (paymentCardDateInput.value.length === 2 && paymentCardDateInput.value.includes(' ') === false && paymentCardDateInput.value.includes('/') === false) {
         paymentCardDateInput.value += ' / '
     }
@@ -935,7 +934,6 @@ function filterCardDate(paymentCardDateInput, cardInfo) {
     if (paymentCardDateInput.value.length === 7) {
         const cardMonth = parseInt(paymentCardDateInput.value.slice(0, 2));
         const cardYear = parseInt(paymentCardDateInput.value.slice(4)) + 2000;
-        console.log(cardYear);
         const currentDate = new Date();
         const currentYear = currentDate.getFullYear();
         const currentMonth = currentDate.getMonth() + 1;
